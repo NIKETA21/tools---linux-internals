@@ -6,13 +6,13 @@ int main()
 {
 	int p[2];
 	pipe(p);
-	printf("Read end of pipe = %d \t write end of pipe = %d\n",p[0],p[1]);
+	printf(" the Read end of pipe = %d \tand the  write end of pipe = %d\n",p[0],p[1]);
 	if(fork())
 	{
-		int s[20];
+		int n[20];
 		printf("In parent enter data...\n");
-		scanf("%d",s);
-		write(p[1],s,strlen(s)+1);
+		scanf("%d",n);
+		write(p[1],s,strlen(n)+1);
 	}
 	else
 	{
